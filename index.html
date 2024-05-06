@@ -1,0 +1,45 @@
+<html>
+<head>
+  <style>
+#form2 {
+        display: none;
+}
+  </style>
+
+  <script>
+function showform2() {
+        var form2 = document.getElementById("form2");
+        form2.style.display = "block";
+        var form1 = document.getElementById("form1");
+        form1.style.display = "none";
+    }
+
+
+  </script>
+</head>
+<body>
+
+
+<center>
+<form id="form1" >
+ <h3>SIGN UP</h3>   <br>
+    Full Name:<input type="text" id="name" name="name">   <br>
+    Contact Number:<input type="text" id="contact" name="contact">   <br>
+    Email:<input type="email" id="email1" name="email1">  <br>
+    Password:<input type="password" id="pass1" name="pass1">   <br>
+   <a href="page2.html"> <input type="button" value="create account"> </a> <br>
+   <input type="button" value="log in" onclick="showform2()">
+   
+  </form>
+
+  <form2 id="form2">
+    <h3>LOG IN</h3>  <br>
+    Email:<input type="email" id="email2" name="email2">  <br>
+    Password:<input type="password" id="pass2" name="pass2">   <br>
+    <a href="page2.html">  <input type="button" value="log in"> </a>
+
+  </form2>
+</center>
+</body>
+
+</html>

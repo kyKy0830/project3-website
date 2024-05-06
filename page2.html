@@ -1,0 +1,114 @@
+<html>
+ 
+<head>
+    <title>Page Title</title>
+<style>
+    .datetime-local {
+        height: 50%;
+
+    }
+    input[type="datetime-local"] {
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            padding: 8px;
+            font-size: 16px;
+            outline: none; 
+        }
+</style>
+<script>
+function clearform() {
+  document.getElementById("form1").reset();
+}
+
+ function showOptLash() {
+ var lash = document.getElementById('lash');
+         var valLash = document.getElementById('valLash');
+         valLash.innerHTML = ('Price: ' + lash[lash.selectedIndex].value);
+ }
+ function showOptNail() {
+ var nail = document.getElementById('nail');
+         var valNail = document.getElementById('valNail');
+         valNail.innerHTML = ('Price: ' + nail[nail.selectedIndex].value);
+ }
+ function showOptBrow() {
+ var brow = document.getElementById('brow');
+         var valBrow = document.getElementById('valBrow');
+         valBrow.innerHTML = ('Price: ' + brow[brow.selectedIndex].value);
+ }
+ function showOptWax() {
+ var wax = document.getElementById('wax');
+         var valWax = document.getElementById('valWax');
+         valWax.innerHTML = ('Price: ' + wax[wax.selectedIndex].value);
+ }
+ function datetime() {
+  var date = document.getElementById("date").value 
+  var time = document.getElementById("time").value 
+document.getElementById("lblShow").innerHTML = "date" + date + "time" + time
+
+}
+
+
+</script>
+</head>
+ 
+<body>
+    <center>
+    <h2>Online Appointment</h2>
+
+ 
+    <form id="form1"  name="form1" method="post" action="page3.asp">
+        choose a service <br>
+        <select name="lashes" id="lash" onchange="showOptLash()">
+            <option selected disabled> EYELASH EXTENSION</option>
+            <option value="350"> Soft Classic</option>
+            <option value="400"> Hybrid</option>
+            <option value="400"> Volume</option>
+            <option value="450"> Hybrid Cat Eye</option>
+            <option value="450"> Volume Cat Eye</option>
+            <option value="450"> Classic Doll Eye</option>
+            <option value="500"> Volume Doll Eye</option>
+            <option value="450"> Mega Volume</option>
+            <option value="550"> Whispy</option>
+            <option value="600"> Whispy Cat Eye</option>
+            <option value="750"> Anime Look</option>
+            <option value="150"> Removal</option>
+    </select> <p id="valLash"></p>
+
+        <select name="nails" id="nail" onchange="showOptNail()">
+            <option selected disabled>NAILS </option>
+            <option value="350"> Softgel Extension</option>
+            <option value="250"> Gel Polish</option>
+            <option value="100"> Softgel Extension Removal</option>        
+    </select> <p id="valNail"></p>
+    <select name="brows" id="brow" onchange="showOptBrow()">
+        <option selected disabled> EYEBROWS </option>
+        <option value="1000"> Ombre Powder Brow</option>
+    </select>  <p id="valBrow"></p>
+    <select name="waxing" id="wax" onchange="showOptWax()">
+        <option selected disabled>WAXING </option>
+        <option value="300"> Face</option>
+        <option value="350"> Bikini</option>
+        <option value="650"> Brazilian</option>
+        <option value="390"> Arms</option>
+        <option value="270"> Underarms</option>
+        <option value="480"> Half Legs</option>
+        <option value="730"> Full Legs</option>
+    </select>  <p id="valWax"></p> <br> 
+
+   
+      Select date and time:  <br>
+      <label name="lblShow" id="lblShow"> </label>
+    <input type="date" id="date" name="date"> 
+    <input type="time" id="time" time="time"> <br>
+    <input type="button" value="ok" onclick="datetime()" >
+<input type="submit" value="book">
+  <input type="button" onclick="clearform()" value="clear choices">
+          </form> 
+          <br><br>
+          <br><br>
+    
+</form>
+</center>
+</body>
+ 
+</html>
